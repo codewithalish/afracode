@@ -41,7 +41,8 @@
                             <header class="el-heading el-heading-1 el-heading-mobilecenter">
                                 <span class="label">ABOUT US</span>
                                 <h2>We'll Plan, Design and Develope & Maintain Project</h2>
-                                <p>Start your Business with AfraCode. Build a beautiful, modern website with flexible Bootstrap components built from scratch.</p>
+                                <p>Start your Business with AfraCode. Build a beautiful, modern website with flexible
+                                    Bootstrap components built from scratch.</p>
                                 <a href="#" class="button button-md button-primary">
                                     <span class="text">Read More</span>
                                 </a>
@@ -66,7 +67,8 @@
                             <header class="el-heading el-heading-1 el-heading-mobilecenter">
                                 <span class="label">SERVICES</span>
                                 <h2>We Provide Awesome Service to our Customer</h2>
-                                <p>Start your Business with AfraCode. Build a beautiful, modern website with flexible Bootstrap components built from scratch.</p>
+                                <p>Start your Business with AfraCode. Build a beautiful, modern website with flexible
+                                    Bootstrap components built from scratch.</p>
                                 <a href="#" class="button button-md button-primary">
                                     <span class="text">More Details</span>
                                 </a>
@@ -88,125 +90,28 @@
                 </header>
                 <div class="row row-lg">
                     <!--Item-->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="el-card el-card-1 el-service el-service-1">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h3><a href="service-1.html">UI/UX Design</a></h3>
-                                </div>
-                                <div class="col-6">
-                                    <div class="el-card-icon bg-shadow-color-1 bg-gradient-color-1">
-                                        <span class="ti-paint-bucket"></span>
+
+                    @foreach(\App\Models\Service::limit(3)->get() as $item)
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="el-card el-card-1 el-service el-service-1">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3><a href="service-1.html">{{$item->title}}</a></h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="el-card-icon bg-shadow-color-1 bg-gradient-color-1">
+                                            <span class="{{$item->icon}}"></span>
+                                        </div>
                                     </div>
                                 </div>
+                                <p>{{$item->description}}</p>
+                                <a href="service-1.html">
+                                    <img src="{{$item->image_path}}" alt="Service">
+                                </a>
                             </div>
-                            <p>He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
-                            <a href="service-1.html">
-                                <img src="/afracode/assets/images/illustrations/1.svg" alt="Service">
-                            </a>
                         </div>
-                    </div>
-                    <!--/-->
-                    <!--Item-->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="el-card el-card-1 el-service el-service-1">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h3><a href="service-2.html">Mobile Development</a></h3>
-                                </div>
-                                <div class="col-6">
-                                    <div class="el-card-icon bg-shadow-color-2 bg-gradient-color-2">
-                                        <span class="ti-mobile"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
-                            <a href="service-2.html">
-                                <img src="/afracode/assets/images/illustrations/2.svg" alt="Service">
-                            </a>
-                        </div>
-                    </div>
-                    <!--/-->
-                    <!--Item-->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="el-card el-card-1 el-service el-service-1">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h3><a href="service-.html">Web Development</a></h3>
-                                </div>
-                                <div class="col-6">
-                                    <div class="el-card-icon bg-shadow-color-3 bg-gradient-color-3">
-                                        <span class="ti-desktop"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
-                            <a href="service-3.html">
-                                <img src="/afracode/assets/images/illustrations/3.svg" alt="Service">
-                            </a>
-                        </div>
-                    </div>
-                    <!--/-->
-                    <!--Item-->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="el-card el-card-1 el-service el-service-1">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h3><a href="service-.html">Machine Learning</a></h3>
-                                </div>
-                                <div class="col-6">
-                                    <div class="el-card-icon bg-shadow-color-4 bg-gradient-color-4">
-                                        <span class="ti-pie-chart"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
-                            <a href="service-4.html">
-                                <img src="/afracode/assets/images/illustrations/4.svg" alt="Service">
-                            </a>
-                        </div>
-                    </div>
-                    <!--/-->
-                    <!--Item-->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="el-card el-card-1 el-service el-service-1">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h3><a href="service-.html">Graphic Designer</a></h3>
-                                </div>
-                                <div class="col-6">
-                                    <div class="el-card-icon bg-shadow-color-5 bg-gradient-color-5">
-                                        <span class="ti-settings"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
-                            <a href="service-5.html">
-                                <img src="/afracode/assets/images/illustrations/5.svg" alt="Service">
-                            </a>
-                        </div>
-                    </div>
-                    <!--/-->
-                    <!--Item-->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="el-card el-card-1 el-service el-service-1">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h3><a href="service-.html">Artificial Intelligence </a></h3>
-                                </div>
-                                <div class="col-6">
-                                    <div class="el-card-icon bg-shadow-color-6 bg-gradient-color-6">
-                                        <span class="ti-crown"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
-                            <a href="service-6.html">
-                                <img src="/afracode/assets/images/illustrations/6.svg" alt="Service">
-                            </a>
-                        </div>
-                    </div>
-                    <!--/-->
+                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -220,7 +125,8 @@
                     <div class="row align-items-center">
                         <div class="col-md-8">
                             <h4>We can help to grow up your online business</h4>
-                            <p>With an intuitive markup, powerful and lightning fast build tools, Quick has everything you need to turn your ideas into incredible products.</p>
+                            <p>With an intuitive markup, powerful and lightning fast build tools, Quick has everything
+                                you need to turn your ideas into incredible products.</p>
                         </div>
                         <div class="col-12 col-md-4 text-right">
                             <a href="#" class="button button-md button-line-light mt-15">

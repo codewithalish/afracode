@@ -32,6 +32,4 @@ Route::view('/test/portfolio2','pages.portfolio2');
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\PageController::class, 'welcome']);
