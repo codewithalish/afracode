@@ -1,0 +1,196 @@
+@extends('layouts.app')
+@section('content')
+
+
+
+
+
+
+<!--Portfolio-->
+<section class="section section-portfolio section-portfolio-1">
+    <div class="pt-space pb-space">
+        <div class="container pt-space">
+            <header class="el-heading el-heading-1 center pb-space">
+                <span class="label mb-5">PORTFOLIO</span>
+                <h2>Our World Class Works</h2>
+            </header>
+            <div class="row row-lg">
+                <!--Item-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="el-card el-card-1 el-portfolio elportfolio-1">
+                        <div class="image">
+                            <a href="https://themeforest.net/item/orwell-organic-food-store-and-healthy-shop/29113626">
+                                <img src="/afracode/assets/images/portfolio/1-1.jpg" alt="Portfolio: Orwell - Organic Food Store and Healthy Shop">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h3>
+                                <a href="#">Orwell - Organic Food Store and Healthy Shop</a>
+                            </h3>
+                            <p><span class="subtitle">by Afracode in Retail</span></p>
+                            <span class="price">$16</span>
+                            <a href="https://themeforest.net/item/orwell-organic-food-store-and-healthy-shop/29113626" class="button button-sm button-secondary button-purchase">
+                                <span class="text">Purchase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <!--Item-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="el-card el-card-1 el-portfolio elportfolio-1">
+                        <div class="image">
+                            <a href="">
+                                <img src="/afracode/assets/images/portfolio/1-2.jpg" alt="Eduline - Language School & Education HTML Template">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h3>
+                                <a href="">Eduline - Language School & Education HTML Template</a>
+                            </h3>
+                            <p><span class="subtitle">by Afracode in Education</span></p>
+                            <span class="price">$14</span>
+                            <a href="https://themeforest.net/item/eduline-language-school-education-html-template/28285178" class="button button-sm button-secondary button-purchase">
+                                <span class="text">Purchase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <!--Item-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="el-card el-card-1 el-portfolio elportfolio-1">
+                        <div class="image">
+                            <a href="">
+                                <img src="/afracode/assets/images/portfolio/1-3.jpg" alt="Nuxt | ReactJS Creative Personal Portfolio Template">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h3>
+                                <a href="">Nuxt | ReactJS Creative Personal Portfolio Template</a>
+                            </h3>
+                            <p><span class="subtitle">by Afracode in Personal</span></p>
+                            <span class="price">$24</span>
+                            <a href="https://themeforest.net/item/nuxt-react-multipurpose-template/26806123" class="button button-sm button-secondary button-purchase">
+                                <span class="text">Purchase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <!--Item-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="el-card el-card-1 el-portfolio elportfolio-1">
+                        <div class="image">
+                            <a href="">
+                                <img src="/afracode/assets/images/portfolio/1-4.jpg" alt="Nuxt – Creative Personal Portfolio HTML Template">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h3>
+                                <a href="">Nuxt – Creative Personal Portfolio HTML Template</a>
+                            </h3>
+                            <p><span class="subtitle">by Afracode in Personal</span></p>
+                            <span class="price">$12</span>
+                            <a href="https://themeforest.net/item/nuxt-creative-personal-portfolio-html-template/27090031" class="button button-sm button-secondary button-purchase">
+                                <span class="text">Purchase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <!--Item-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="el-card el-card-1 el-portfolio elportfolio-1">
+                        <div class="image">
+                            <a href="">
+                                <img src="/afracode/assets/images/portfolio/1-5.jpg" alt="Miro - ReactJS Creative Personal Portfolio Template">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h3>
+                                <a href="">Miro - ReactJS Creative Personal Portfolio Template</a>
+                            </h3>
+                            <p><span class="subtitle">by Afracode in Personal</span></p>
+                            <span class="price">$18</span>
+                            <a href="https://themeforest.net/item/reactjs-creative-personal-portfolio-template-miro/27150547" class="button button-sm button-secondary button-purchase">
+                                <span class="text">Purchase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <!--Item-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="el-card el-card-1 el-portfolio elportfolio-1">
+                        <div class="image">
+                            <a href="">
+                                <img src="/afracode/assets/images/portfolio/1-6.jpg" alt="Miro - Creative Personal Portfolio HTML Template">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h3>
+                                <a href="">Miro - Creative Personal Portfolio HTML Template</a>
+                            </h3>
+                            <p><span class="subtitle">by Afracode in Personal</span></p>
+                            <span class="price">$16</span>
+                            <a href="https://themeforest.net/item/miro-creative-personal-portfolio-template/25277438?s_rank=6" class="button button-sm button-secondary button-purchase">
+                                <span class="text">Purchase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <!--Item-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="el-card el-card-1 el-portfolio elportfolio-1">
+                        <div class="image">
+                            <a href="">
+                                <img src="/afracode/assets/images/portfolio/1-7.jpg" alt="Orwell - Organic Food Store and Healthy Shop">
+                            </a>
+                        </div>
+                        <div class="details">
+                            <h3>
+                                <a href="">Afra - Multipurpose Business & Agency HTML5 Template</a>
+                            </h3>
+                            <p><span class="subtitle">by Afracode in Corporate</span></p>
+                            <span class="price">$19</span>
+                            <a href="https://themeforest.net/item/afra-multipurpose-business-agency-html5-template/24730262?s_rank=7" class="button button-sm button-secondary button-purchase">
+                                <span class="text">Purchase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+            </div>
+        </div>
+    </div>
+</section>
+<!--/-->
+<!--CTA-->
+<section class="">
+    <div class="mb-space">
+        <div class="container">
+            <div class="section-cta section-cta-17 bg-primary">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h4>We can help to grow up your online business</h4>
+                        <p>With an intuitive markup, powerful and lightning fast build tools, Quick has everything you need to turn your ideas into incredible products.</p>
+                    </div>
+                    <div class="col-12 col-md-4 text-right">
+                        <a href="#" class="button button-md button-line-light mt-15">
+                            <span class="text">Contact Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/-->
+
+
+
+
+
+@endsection
