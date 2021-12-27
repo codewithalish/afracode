@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-md-12 col-lg-6">
                     <div class="hero-frame">
-                        <img src="/afracode//afracode/assets/images/frames/macbook.svg" alt="Frame Shwocase">
+                        <img src="/afracode/assets/images/frames/macbook.svg" alt="Frame Shwocase">
                         <div class="hero-frame-inner"></div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row row-lg">
                     <div class="col-lg-7 order-lg-1 text-left col-image">
-                        <img src="/afracode//afracode/assets/images/images/2.png" alt="About Us">
+                        <img src="/afracode/assets/images/images/2.png" alt="About Us">
                     </div>
                     <div class="col-lg-5 order-lg-2">
                         <div class="display-spacing">
@@ -59,7 +59,7 @@
             <div class="container">
                 <div class="row row-lg">
                     <div class="col-lg-7 order-lg-2 text-right item-1 col-image">
-                        <img src="/afracode//afracode/assets/images/images/1.png" alt="Main services">
+                        <img src="/afracode/assets/images/images/1.png" alt="Main services">
                     </div>
                     <div class="col-lg-5 order-lg-1 item-2">
                         <div class="display-spacing">
@@ -102,7 +102,7 @@
                             </div>
                             <p>He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
                             <a href="service-1.html">
-                                <img src="/afracode//afracode/assets/images/illustrations/1.svg" alt="Service">
+                                <img src="/afracode/assets/images/illustrations/1.svg" alt="Service">
                             </a>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                             </div>
                             <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
                             <a href="service-2.html">
-                                <img src="/afracode//afracode/assets/images/illustrations/2.svg" alt="Service">
+                                <img src="/afracode/assets/images/illustrations/2.svg" alt="Service">
                             </a>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                             </div>
                             <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
                             <a href="service-3.html">
-                                <img src="/afracode//afracode/assets/images/illustrations/3.svg" alt="Service">
+                                <img src="/afracode/assets/images/illustrations/3.svg" alt="Service">
                             </a>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                             </div>
                             <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
                             <a href="service-4.html">
-                                <img src="/afracode//afracode/assets/images/illustrations/4.svg" alt="Service">
+                                <img src="/afracode/assets/images/illustrations/4.svg" alt="Service">
                             </a>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                             </div>
                             <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
                             <a href="service-5.html">
-                                <img src="/afracode//afracode/assets/images/illustrations/5.svg" alt="Service">
+                                <img src="/afracode/assets/images/illustrations/5.svg" alt="Service">
                             </a>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                             </div>
                             <p> He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little... </p>
                             <a href="service-6.html">
-                                <img src="/afracode//afracode/assets/images/illustrations/6.svg" alt="Service">
+                                <img src="/afracode/assets/images/illustrations/6.svg" alt="Service">
                             </a>
                         </div>
                     </div>
