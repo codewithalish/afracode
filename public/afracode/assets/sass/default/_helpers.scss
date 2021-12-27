@@ -1,0 +1,526 @@
+/*------------------------------------
+/*------------------------------------
+    Helpers
+------------------------------------*/
+
+// Text Helpers
+.text-bold {
+    font-weight: bold;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-bold {
+    font-weight: 600;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-color {
+    color: $text-color;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.text-italic {
+    font-style: italic;
+}
+.text-normal {
+    font-style: normal;
+}
+.text-underline {
+    font-style: underline;
+}
+
+/*
+* Text Colors
+*/
+.text-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text-dark {
+    color: $black !important;
+}
+.text-dark-1 {
+    color: #333333;
+}
+.text-dark-2 {
+    color: #666666;
+}
+.text-dark-3 {
+    color: #999999;
+}
+.text-light {
+    color: $white !important;
+}
+.text-light-1 {
+    color: #eeeeee;
+}
+.text-light-2 {
+    color: #cccccc;
+}
+.text-light-3 {
+    color: #aaaaaa;
+}
+.text-base-0 {
+    color: $base-0;
+}
+.text-base-1 {
+    color: $base-1;
+}
+.text-base-1 {
+    color: $base-2;
+}
+.text-danger {
+    color: $danger;
+}
+.text-success {
+    color: $success;
+}
+.text-warning {
+    color: $warning;
+}
+.text-primary {
+    color: $primary !important;
+}
+.text-secondary {
+    color: $secondary;
+}
+.text-gradient {
+    background-image: linear-gradient(to left, $primary, $secondary);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+// Other
+
+.hidden {
+    display: none;
+}
+.invisible {
+    visibility: hidden;
+}
+.div-center {
+    float: none !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.inline-block {
+    float: none;
+    display: inline-block;
+}
+.clearfix {
+    @include clearfix();
+}
+
+// Display Helpers
+.display-wrap {
+    position: relative;
+}
+.display-block {
+    display: block;
+}
+.display-center {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.reset-display-center {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    transform: 0;
+}
+.display-table {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.display-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+.display-spacing {
+    padding-top: $space;
+    padding-bottom: $space;
+}
+.display-spacing-plus {
+    padding-top: $space + 30px;
+    padding-bottom: $space;
+}
+.display-spacing-double {
+    padding-top: $space + $space;
+    padding-bottom: $space;
+}
+.display-screen {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.display-fit-screen {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+.display-full-screen {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+}
+
+// Max Width
+.max-w-576 {
+    max-width: 576px;
+}
+.max-w-768 {
+    max-width: 768px;
+}
+.max-w-992 {
+    max-width: 992px;
+}
+
+// Font Weight
+@each $i in (1, 2, 3, 4, 5, 6, 7, 8, 9) {
+    $j: $i * 100;
+    .fw-#{$j} {
+        font-weight: $j;
+    }
+}
+
+// Overlay
+.overlay-color {
+    @include overlay("color");
+}
+.overlay-image {
+    @include overlay("image");
+}
+.overlay-pattern {
+    @include overlay("pattern");
+}
+.overlay-gradient {
+    @include overlay("gradient");
+}
+
+// Background Colors
+.bg-google {
+    background-color: $google !important;
+}
+.bg-twitter {
+    background-color: $twitter !important;
+}
+.bg-linkedin {
+    background-color: $linkedin !important;
+}
+.bg-facebook {
+    background-color: $facebook !important;
+}
+.bg-instagram {
+    background-color: $instagram !important;
+}
+.bg-pinterest {
+    background-color: $pinterest !important;
+}
+.bg-danger {
+    background-color: $danger !important;
+}
+.bg-success {
+    background-color: $success !important;
+}
+.bg-warning {
+    background-color: $warning !important;
+}
+.bg-gray {
+    background-color: $gray !important;
+}
+.bg-primary {
+    background-color: $primary !important;
+}
+.bg-primary-1 {
+    background-color: $primary-1 !important;
+}
+.bg-primary-3 {
+    background-color: $primary-3 !important;
+}
+.bg-secondary {
+    background-color: $secondary !important;
+}
+.bo-color-1 {
+    border-color: $color-1 !important;
+}
+.bo-color-2 {
+    border-color: $color-2 !important;
+}
+.bo-color-3 {
+    border-color: $color-3 !important;
+}
+.bo-color-4 {
+    border-color: $color-4 !important;
+}
+.bo-color-5 {
+    border-color: $color-5 !important;
+}
+.bo-color-6 {
+    border-color: $color-6 !important;
+}
+.bo-primary {
+    border-color: $primary !important;
+}
+.bp-secondary {
+    border-color: $secondary !important;
+}
+.bg-color-1 {
+    background-color: $color-1 !important;
+}
+.bg-color-2 {
+    background-color: $color-2 !important;
+}
+.bg-color-3 {
+    background-color: $color-3 !important;
+}
+.bg-color-4 {
+    background-color: $color-4 !important;
+}
+.bg-color-5 {
+    background-color: $color-5 !important;
+}
+.bg-color-6 {
+    background-color: $color-6 !important;
+}
+.bg-gradient-color-1 {
+    background-image: linear-gradient(40deg, #f8a438 0%, #fabd6e 100%);
+}
+.bg-gradient-color-2 {
+    background-image: linear-gradient(40deg, #2c82ed 0%, #38d0fc 100%);
+}
+.bg-gradient-color-3 {
+    background-image: linear-gradient(40deg, #57b22a 0%, #77ea3d 100%);
+}
+.bg-gradient-color-4 {
+    background-image: linear-gradient(40deg, #ff0000 0%, #ff5959 100%);
+}
+.bg-gradient-color-5 {
+    background-image: linear-gradient(40deg, #c670fe 0%, #dcadfc 100%);
+}
+.bg-gradient-color-6 {
+    background-image: linear-gradient(40deg, #00008b 0%, #0000e9 100%);
+}
+// Shadow Color
+.bg-shadow-color-1 {
+    box-shadow: 0px 14px 30px 0px rgba(255, 155, 18, 0.3);
+}
+.bg-shadow-color-2 {
+    box-shadow: 0 10px 30px 0 rgba(44, 130, 237, 0.3);
+}
+.bg-shadow-color-3 {
+    box-shadow: 0px 14px 30px 0px rgba(87, 178, 42, 0.3);
+}
+.bg-shadow-color-4 {
+    box-shadow: 0px 14px 30px 0px rgba(255, 23, 23, 0.3);
+}
+.bg-shadow-color-5 {
+    box-shadow: 0px 14px 30px 0px rgba(198, 113, 254, 0.42);
+}
+.bg-shadow-color-6 {
+    box-shadow: 0px 14px 30px 0px rgba(0, 0, 139, 0.24);
+}
+.bg-light {
+    background-color: $white !important;
+}
+.bg-dark {
+    background-color: $black !important;
+}
+.bg-base-0 {
+    background-color: $base-0 !important;
+}
+.bg-base-1 {
+    background-color: $base-1 !important;
+}
+.bg-primary {
+    background-color: $primary !important;
+}
+.bg-secondary {
+    background-color: $secondary !important;
+}
+.bg-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    @extend .overlay-image;
+}
+.bg-gradient-side {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to($primary));
+    background-image: linear-gradient(270deg, $primary 0%, transparent 70%);
+}
+.bg-dark-side {
+    background-image: -webkit-gradient(linear, left top, left bottom, from($base-1), to(transparent));
+    background-image: linear-gradient(270deg, transparent 0%, rgba(83, 83, 102, 0.6) 81%);
+}
+.bg-animation-1 {
+    background: linear-gradient(-45deg, #000, #151515, var(--secondary), var(--primary), #000);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 9s ease infinite;
+    animation: Gradient 9s ease infinite;
+}
+.bg-animation-2 {
+    background: linear-gradient(-45deg, #fff, var(--primary), var(--secondary), var(--primary), #fff);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 9s ease infinite;
+    animation: Gradient 9s ease infinite;
+}
+@each $i in (1, 2, 3, 4, 5, 6, 7, 8, 9, 100) {
+    $j: $i / 10;
+    .bg-dark-#{$i}0 {
+        background-color: rgba(0, 0, 0, $j);
+    }
+}
+@each $i in (1, 2, 3, 4, 5, 6, 7, 8, 9, 100) {
+    $j: $i / 10;
+    .bg-light-#{$i}0 {
+        background-color: rgba(255, 255, 255, $j);
+    }
+}
+@each $i in (0, 45, 90, 135, 180, 225, 270, 315, 360) {
+    .bg-gradient-#{$i} {
+        @include bg-gradient($i);
+    }
+}
+.react-rotating-text-cursor {
+    animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+.row-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (min-width: 1200px) {
+    .row-xl-5 {
+        & > * {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .row-lg-5 {
+        & > * {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+}
+
+.overlay-color {
+    .bg-dark {
+        z-index: 1;
+        opacity: 0.6 !important;
+        background-color: $primary-3;
+    }
+}
+
+.app-wrapper {
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    background-image: linear-gradient(90deg, transparent, rgba(45, 21, 130, 0.06));
+    &:before {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        z-index: -1;
+        opacity: 0.1;
+        position: fixed;
+        background-repeat: repeat-x;
+    }
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+    @include placeholder() {
+        color: $text-color;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 768px) {
+    .display-spacing-plus {
+        padding-top: $space + 75;
+    }
+}
+
+.container {
+    direction: ltr;
+}
+// Hidden
+.hidden-xs-up {
+    display: none !important;
+}
+.hidden-xl-down {
+    display: none !important;
+}
+@media (max-width: 575px) {
+    .hidden-xs-down {
+        display: none !important;
+    }
+}
+@media (min-width: 576px) {
+    .hidden-sm-up {
+        display: none !important;
+    }
+}
+@media (max-width: 767px) {
+    .hidden-sm-down {
+        display: none !important;
+    }
+}
+@media (min-width: 768px) {
+    .hidden-md-up {
+        display: none !important;
+    }
+}
+@media (max-width: 991px) {
+    .hidden-md-down {
+        display: none !important;
+    }
+}
+@media (min-width: 992px) {
+    .hidden-lg-up {
+        display: none !important;
+    }
+}
+@media (max-width: 1199px) {
+    .hidden-lg-down {
+        display: none !important;
+    }
+}
+@media (min-width: 1200px) {
+    .hidden-xl-up {
+        display: none !important;
+    }
+}

@@ -1,0 +1,55 @@
+<header class="app-header app-header-1 fixed dark">
+    <div class="header-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="header-logo">AfraCode</div>
+                    <button class="button button-menu button-display-sidenav">
+                        <span></span>
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <!--Menu-->
+                    <ul class="el-menu">
+                        <li>
+                            <a href="index.html">
+                                <span class="icon"></span>
+                                <span class="text">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="page-about.html">
+                                <span class="icon"></span>
+                                <span class="text">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                <span class="icon"></span>
+                                <span class="text">Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html">
+                                <span class="icon"></span>
+                                <span class="text">Portfolio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="page-contact.html">
+                                <span class="icon"></span>
+                                <span class="text">Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--/-->
+                </div>
+                <div class="col-md-3 text-right">
+                    <a href="#" class="button button-md button-contact-us button-line-secondary">
+                        <span class="text">Contact Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

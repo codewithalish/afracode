@@ -1,0 +1,160 @@
+/*------------------------------------
+    Section: Services
+------------------------------------*/
+
+.el-service {
+    &.el-service-1 {
+        padding: 30px;
+        h3 {
+            margin-bottom: 30px;
+        }
+        img {
+            height: 100px;
+            float: right;
+        }
+        .el-card-icon {
+            top: 0;
+            right: 15px;
+            position: absolute;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .el-service {
+        &.el-service-1 {
+            p {
+                width: 60%;
+            }
+        }
+    }
+}
+
+
+/*------------------------------------
+    Section: Services
+------------------------------------*/
+
+.section-services {
+    height: 100vh;
+    position: relative;
+    .shape {
+        width: 50%;
+        padding-top: 50%;
+        position: absolute;
+        border-radius: 50%;
+        background-color: $secondary;
+    }
+}
+
+// Services - 1
+.section-services {
+    &.section-services-1 {
+        .shape {
+            top: 3%;
+            right: -25%;
+        }
+    }
+}
+
+// Services - 2
+.section-services {
+    &.section-services-2 {
+        .shape {
+            top: 3%;
+            right: -25%;
+            background-color: $secondary;
+            background-color: $primary;
+        }
+    }
+}
+
+// Default
+.el-device {
+    .custom {
+        margin-top: -100px;
+    }
+}
+
+// Mobile Device
+.el-device {
+    &.el-device-mobile {
+        top: 12%;
+        right: 12%;
+        width: 400px;
+        height: 0;
+        background-color: orange;
+        position: absolute;
+        .el-device-frame {
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding-top: 177%;
+            position: absolute;
+            & > img {
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 3;
+                position: absolute;
+            }
+            .el-device-inner {
+                top: 5.2%;
+                left: 14%;
+                right: 14%;
+                bottom: 11.22%;
+                margin: auto;
+                border-radius: 30px;
+                position: absolute;
+                background-color: #212121;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .section-services {
+        height: inherit;
+        .display-center {
+            top: inherit !important;
+            left: inherit !important;
+            right: inherit !important;
+            bottom: inherit !important;
+            position: relative !important;
+            transform: translate(0,0) !important;
+            padding-top: 150px;
+            padding-bottom: 60px;
+        }
+        .el-device {
+            display: none;
+        }
+        .el-device.el-device-mobile {
+            top: inherit !important;
+            left: inherit !important;
+            right: inherit !important;
+            bottom: inherit !important;
+            position: relative !important;
+            transform: translate(0,0) !important;
+            height: inherit !important;
+            overflow: hidden;
+            position: relative !important;
+            background-color: transparent !important;
+            margin: auto !important;
+            .el-device-frame {
+                width: 300px;
+                height: 533px;
+                top: inherit !important;
+                left: inherit !important;
+                right: inherit !important;
+                bottom: inherit !important;
+                padding: 0 !important;
+                position: relative !important;
+                transform: translate(0,0) !important;
+                position: relative !important;
+            }
+        }
+        .shape {
+            opacity: .3;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+/*------------------------------------
+    Section: Portfolio
+------------------------------------*/
+
+// Portfolio - 15
+.section-portfolio {
+    &.section-portfolio-15 {
+        .el-card {
+            padding-top: 129%;
+            background-color: $gray;
+        }
+    }
+}
+
+.el-portfolio {
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    .details {
+        padding: 20px;
+        position: relative;
+        h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        .price {
+            font-size: 21px;
+            font-weight: 700;
+        }
+        .subtitle {
+            display: block;
+            font-size: 14px;
+        }
+        .button {
+            right: 20px;
+            bottom: 20px;
+            position: absolute;
+            border-radius: 6px;
+            &.button-preview {
+                right: 108px;
+            }
+        }
+    }
+}

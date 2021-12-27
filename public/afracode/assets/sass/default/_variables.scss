@@ -1,0 +1,108 @@
+/*------------------------------------
+    Variables
+------------------------------------*/
+
+:root {
+    --gray: #eee;
+    --white: #fff;
+    --black: #000;
+    --base: #fff;
+    --base-0: #fff;
+    --base-1: #151812;
+    --base-1: #152c5b;
+    --primary: #ef394e;
+    --primary: #384cce;
+    --primary: #008aff;
+    --primary: #0099ff;
+    --primary-1: #384cce;
+    --primary-3: #171347;
+    --secondary: #00c9b7;
+    --secondary: #f8a438;
+    --secondary-1: rgb(18, 172, 159);
+    --secondary-1: rgb(248, 164, 56);
+    --text-color: #666;
+    --text-color: #718096;
+    --color-1: #70b6fe;
+    --color-2: #c670fe;
+    --color-3: #fec070;
+    --color-4: #dc3545;
+    --color-5: #28a745;
+    --color-6: darkblue;
+    --default: rgb(252, 255, 235);
+}
+
+// Colors
+$gray: var(--gray);
+$white: var(--white);
+$black: var(--black);
+$base: var(--base);
+$base-0: var(--base-0);
+$base-1: var(--base-1);
+$base-2: var(--base-2);
+$base-3: var(--base-3);
+$default: var(--default);
+$primary: var(--primary);
+$primary-1: var(--primary-1);
+$primary-3: var(--primary-3);
+$secondary: var(--secondary);
+$secondary-1: var(--secondary-1);
+$text-color: var(--text-color);
+$color-1: var(--color-1);
+$color-2: var(--color-2);
+$color-3: var(--color-3);
+$color-4: var(--color-4);
+$color-5: var(--color-5);
+$color-6: var(--color-6);
+$success: green;
+$warning: #f6931c;
+$danger: red;
+
+// Social
+$google: #B23121;
+$twitter: #1DA1F2;
+$linkedin: #0e76a8;
+$facebook: #3b5998;
+$instagram: #E1306C;
+$instagram: #C13584;
+$pinterest: #BD081C;
+$pinterest: #B23121;
+
+// Font Family
+// $font-family-1: 'Jost', sans-serif;
+// $font-family-1: 'Open Sans', sans-serif;
+// $font-family-1: 'Helvetica', sans-serif;
+// $font-family-1: 'Nunito Sans', sans-serif;
+$font-family-1: 'Cairo', sans-serif;
+$font-family-2: 'Cairo', sans-serif;
+$font-family-3: 'Cairo', sans-serif;
+
+
+// Grid
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1230px;
+$space: 100px;
+
+// Heading
+$h1: 60px;
+$h2: 36px;
+$h3: 27px;
+$h4: 24px;
+$h5: 18px;
+$h6: 16px;
+$heading-font: $font-family-1;
+$heading-color: $base-1;
+
+// Container Width
+$container-xs: 480px;
+$container-sm: 750px;
+$container-md: 970px;
+$container-lg: 1200px;
+$container-xl: 1800px;
+
+$default-br: 9px;
+$default-br: 12px;
+$default-bs: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+$default-bs-2: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+$default-bs-hover: 0 3px 1px 0 $primary;
