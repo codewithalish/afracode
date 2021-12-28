@@ -19,6 +19,7 @@ Route::view('/test/blog','pages.blog');
 Route::view('/test/contact','pages.contact');
 Route::view('/test/about','pages.about');
 Route::view('/test/portfolio2','pages.portfolio2');
+Route::view('/test/portfolio','pages.portfolio');
 
 
 /*
