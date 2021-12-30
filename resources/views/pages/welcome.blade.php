@@ -92,6 +92,7 @@
                     <!--Item-->
 
                     @foreach(\App\Models\Service::limit(3)->get() as $item)
+{{--                    @foreach($items as $item)--}}
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="el-card el-card-1 el-service el-service-1">
                                 <div class="row">
