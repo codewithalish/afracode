@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         \App\Models\Service::factory(10)->create();
+//         \App\Models\Service::factory(10)->create();
+
+
+        $this->call([ServiceSeeder::class]);
+        $this->call([PortfolioSeeder::class]);
+
+
     }
 }
