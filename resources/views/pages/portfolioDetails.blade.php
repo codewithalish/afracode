@@ -79,87 +79,19 @@
             <h2>Why Choose Us?</h2>
         </header>
         <div class="row row-lg">
+
+            @foreach(\App\Models\PortfolioDetail::limit(10)->get() as $item)
+{{--            @foreach($items as $item)--}}
             <div class="col-12 col-md-12 col-lg-6 col-xl-4">
                 <div class="el-card el-feature el-feature-16">
                     <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-1.png" alt="Features">
+                        <img src="{{$item->image_path}}" alt="Features">
                     </div>
-                    <h4>Fully Responsive Layout</h4>
-                    <p>Responsive web design is an approach to web design that makes web pages render well on a variety of devices screen sizes.</p>
+                    <h4>{{$item->title}}</h4>
+                    <p>{{$item->body}}</p>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-4">
-                <div class="el-card el-feature el-feature-16">
-                    <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-2.png" alt="Features">
-                    </div>
-                    <h4>SEO Friendly</h4>
-                    <p>Our theme is SEO friendly that aligns with your digital marketing strategies to bring more organic traffic to your website.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-4">
-                <div class="el-card el-feature el-feature-16">
-                    <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-3.png" alt="Features">
-                    </div>
-                    <h4>Faster Loading</h4>
-                    <p>Moreover, your website speed is very important for your SEO. If your website loads fast, your ranking in search engines will be higher.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-4">
-                <div class="el-card el-feature el-feature-16">
-                    <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-4.png" alt="Features">
-                    </div>
-                    <h4>Google Font</h4>
-                    <p>A vast collection of Google fonts are integrated with the theme. You can use any of them that goes with your branding.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-4">
-                <div class="el-card el-feature el-feature-16">
-                    <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-5.png" alt="Features">
-                    </div>
-                    <h4>Creative Design</h4>
-                    <p>[Name] is a bold theme that organizing content to follow natural eyes, striking balance between beautiful and visual hierarchy.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-4">
-                <div class="el-card el-feature el-feature-16">
-                    <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-6.png" alt="Features">
-                    </div>
-                    <h4>Lifetime Update</h4>
-                    <p>Purchase our theme only once and get lifetime updates. We keep updating our products to stay up to date with latest trends and technology.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-4">
-                <div class="el-card el-feature el-feature-16">
-                    <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-7.png" alt="Features">
-                    </div>
-                    <h4>Mobile Optimized</h4>
-                    <p>A mobile optimized site is a far more advanced website. Mobile optimized means that the site will reformat itself for a list of devices.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-4">
-                <div class="el-card el-feature el-feature-16">
-                    <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-8.png" alt="Features">
-                    </div>
-                    <h4>Font Awesome</h4>
-                    <p>This theme comes with high quality icons from FontAwesome. All the icons are font based and ready to match the quality of any HQ screen.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-4">
-                <div class="el-card el-feature el-feature-16">
-                    <div class="icon">
-                        <img src="/afracode/assets/images/icons/feature-9.png" alt="Features">
-                    </div>
-                    <h4>Ready for Deployment</h4>
-                    <p>We have made the deployment process clean and simple. You can deploy the template with Now.sh.</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
