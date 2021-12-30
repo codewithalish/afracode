@@ -16,5 +16,5 @@ class Portfolio extends Model
         ];
 
 
-   // $portfolio_option=Portfolios::limit(10)->get()
+//\App\Models\Portfolio::limit(10)->get()
 }
