@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,10 +12,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
-
-
-Route::view('/test/blade','pages.test');
+Route::view('/test/welcome','pages.welcome');
 Route::view('/test/blog','pages.blog');
 Route::view('/test/contact','pages.contact');
 Route::view('/test/about','pages.about');
@@ -33,4 +31,17 @@ Route::view('/test/portfolio','pages.portfolio');
 |
 */
 
-Route::get('/', [\App\Http\Controllers\PageController::class, 'welcome']);
+//Route::get('/', [\App\Http\Controllers\SeviceController::class, 'welcome']);
+
+/*
+|--------------------------------------------------------------------------
+| login
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+Route::get('/login', [LoginController::class,'login']);
+Route::post('/admin/checkLogin', [LoginController::class,'checkLogin']);
