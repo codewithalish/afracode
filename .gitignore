@@ -13,3 +13,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/public/afracode/admin/login/node_modules/
+/public/afracode/admin/login/

@@ -45,7 +45,7 @@ Route::view('/test/portfolio','pages.portfolio');
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/login', [LoginController::class,'login']);
+Route::get('/admin/login', [LoginController::class,'login']);
 Route::post('/admin/checkLogin', [LoginController::class,'checkLogin']);
 
 
