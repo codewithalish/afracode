@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -23,6 +25,15 @@ class LoginController extends Controller
     }
    }
 
+   public function create(){
+       return view('admin.register');
+   }
 
+   public function register(Request $request){
+       $fields=$request->only('name','email','password');
+       $fields['password']=Hash::make($fields['password']);
+       User::create($fields);
+       return redirect('/admin/login')->with('success','با موفقیت ثبت شدید.');
+   }
 
 }
