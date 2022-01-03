@@ -25,7 +25,7 @@
                                 <a href="#">{{$item->title}}</a>
                             </h3>
                             <p><span class="subtitle">{{$item->body}}</span></p>
-                            <span class="price">{{$item->price}}</span>
+                            <span class="price">{{$item->price}}$</span>
                             <a href="/pages/portfolio" class="button button-sm button-secondary button-purchase">
                                 <span class="text">show</span>
                             </a>
