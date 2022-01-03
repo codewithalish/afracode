@@ -4,10 +4,13 @@
     document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.27.7'><\/script>".replace("HOST", location.hostname));
     //]]></script>
 
+
 <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
-    <div class="container">
+        <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
+                @include('admin.partials.alert')
+
                 <form action="/admin/login" method="post">
                     @csrf
                     <div class="card-group d-block d-md-flex row">
@@ -42,7 +45,9 @@
                                 <div>
                                     <h2>Sign up</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <a href="/admin/register">
                                     <button class="btn btn-lg btn-outline-light mt-3" type="button">Register Now!</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
