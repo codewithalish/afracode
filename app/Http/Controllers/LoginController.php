@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -14,7 +14,15 @@ class LoginController extends Controller
 
     public function checkLogin(Request $request)
     {
-      $query=$request->only(['email','password']) ;
-      return $query;
+    $login_field=$request->only(['email','password']);
+    $result=auth::attempt($login_field);
+    if($result){
+        return redirect('admin/dashboard');
+    } else{
+        return redirect('admin/login')->with('error','نام کاربری یا رمز عبور اشتباه است.');
+    }
    }
+
+
+
 }
