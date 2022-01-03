@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\adminController;
+use Illuminate\Support\Facades\Hash;
 /*
 |--------------------------------------------------------------------------
 | Dev
@@ -18,6 +19,10 @@ Route::view('/test/contact','pages.contact');
 Route::view('/test/about','pages.about');
 Route::view('/test/portfolio2','pages.portfolio2');
 Route::view('/test/portfolio','pages.portfolio');
+
+Route::get('/test/password/{pass}',function ($pass){
+    return Hash::make($pass);
+});
 
 
 /*
@@ -44,4 +49,6 @@ Route::view('/test/portfolio','pages.portfolio');
 |
 */
 Route::get('/admin/login', [LoginController::class,'login']);
-Route::post('/admin/checkLogin', [LoginController::class,'checkLogin']);
+Route::post('/admin/login', [LoginController::class,'checkLogin']);
+Route::get('/admin/dashboard', [adminController::class,'dashboard']);
+
