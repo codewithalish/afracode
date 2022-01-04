@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Hash;
 |
 */
 
-Route::view('/test/welcome','pages.welcome');
+Route::view('/','pages.welcome');
 Route::view('/test/blog','pages.blog');
 Route::view('/test/contact','pages.contact');
 Route::view('/test/about','pages.about');

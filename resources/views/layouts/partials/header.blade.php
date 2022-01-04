@@ -45,8 +45,8 @@
                     <!--/-->
                 </div>
                 <div class="col-md-3 text-right">
-                    <a href="#" class="button button-md button-contact-us button-line-secondary">
-                        <span class="text">Contact Us</span>
+                    <a href="/admin/login" class="button button-md button-contact-us button-line-secondary">
+                        <span class="text"> log in </span>
                     </a>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@extends('admin.loginMaster')
+@extends('admin.loginMasterPage')
 @section('content')
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.27.7'><\/script>".replace("HOST", location.hostname));
