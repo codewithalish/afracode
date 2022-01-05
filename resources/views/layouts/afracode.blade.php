@@ -29,16 +29,16 @@
 <body>
 
 <!--Header-->
-@include('layouts.partials.header')
+@include('layouts.partials.afracode.header')
 <!--/-->
 <!--Sidenav-->
-@include('layouts.partials.sidenav')
+@include('layouts.partials.afracode.sidenav')
 <!--/-->
 
 @yield('content')
 
 <!--Footer-->
-@include('layouts.partials.footer')
+@include('layouts.partials.afracode.footer')
 <!--/-->
 <!--Scripts-->
 <script src="/afracode/assets/js/jquery.min.js"></script>

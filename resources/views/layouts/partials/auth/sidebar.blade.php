@@ -18,22 +18,18 @@
                     <use xlink:href="/afracode/admin/login/node_modules/@coreui/icons/sprites/free.svg#cil-puzzle"></use>
                 </svg> Base</a>
             <ul class="nav-group-items">
-                <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"></span> تنظیمات پروفایل</a></li>
-                <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"></span> مطالب من</a></li>
-                <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"></span> افزودن مطلب</a></li>
-                <li class="nav-item"><a class="nav-link" href="base/carousel.html"><span class="nav-icon"></span> کیف پول</a></li>
-                <li class="nav-item"><a class="nav-link" href="base/collapse.html"><span class="nav-icon"></span> لیست مشتریان</a></li>
-                <li class="nav-item"><a class="nav-link" href="base/list-group.html"><span class="nav-icon"></span> لیست ستاره دار</a></li>
-                <li class="nav-item"><a class="nav-link" href="base/list-group.html"><span class="nav-icon"></span> پشتیبانی</a></li>
-                <li class="nav-item"><a class="nav-link" href="base/list-group.html"><span class="nav-icon"></span>خروج</a></li>
+                <li class="nav-item"><a class="nav-link" href="/admin/posts"><span class="nav-icon"></span> تنظیمات پروفایل</a></li>
+                <li class="nav-item"><a class="nav-link" href="/admin/posts/create"><span class="nav-icon"></span> مطالب من</a></li>
 
             </ul>
         </li>
         <li class="nav-title">Extras</li>
-        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <li class="nav-group">
+            <a class="nav-link nav-group-toggle" href="/admin/pages">
                 <svg class="nav-icon">
                     <use xlink:href="/afracode/admin/login/node_modules/@coreui/icons/sprites/free.svg#cil-star"></use>
-                </svg> Pages</a>
+                </svg> Pages
+            </a>
             <ul class="nav-group-items">
                 <li class="nav-item"><a class="nav-link" href="login" target="_top">
                         <svg class="nav-icon">

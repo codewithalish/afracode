@@ -9,10 +9,8 @@
 -->
 
 <html lang="en">
-@include('admin.partials.head')
+@include('layouts.partials.auth.head')
 <body>
-@include('admin.partials.header')
-@include('admin.partials.sidebar')
 @yield('content')
 <!-- CoreUI and necessary plugins-->
 <script src="/afracode/admin/login/node_modules/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>

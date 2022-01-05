@@ -1,4 +1,4 @@
-@extends('admin.loginMasterPage')
+@extends('layouts.login')
 @section('content')
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.27.7'><\/script>".replace("HOST", location.hostname));
@@ -9,7 +9,7 @@
         <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                @include('admin.partials.alert')
+                @include('layouts.partials.auth.alert')
 
                 <form action="/admin/login" method="post">
                     @csrf

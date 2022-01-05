@@ -11,7 +11,7 @@ class LoginController extends Controller
     //
    public function login(){
 
-       return view('admin.login');
+       return view('auth.login');
    }
 
     public function checkLogin(Request $request)
@@ -19,14 +19,14 @@ class LoginController extends Controller
     $login_field=$request->only(['email','password']);
     $result=auth::attempt($login_field);
     if($result){
-        return redirect('admin/dashboard');
+        return redirect('admin');
     } else{
         return redirect('admin/login')->with('error','نام کاربری یا رمز عبور اشتباه است.');
     }
    }
 
    public function create(){
-       return view('admin.register');
+       return view('auth.register');
    }
 
    public function register(Request $request){

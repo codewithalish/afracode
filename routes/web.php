@@ -22,13 +22,24 @@ use \App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
-| Dev
+| Public
 |--------------------------------------------------------------------------
 |
 |
 */
 
 Route::view('/','pages.welcome');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Dev
+|--------------------------------------------------------------------------
+|
+|
+*/
+Route::view('/test','admin.test');
 Route::view('/test/blog','pages.blog');
 Route::view('/test/contact','pages.contact');
 Route::view('/test/about','pages.about');
@@ -41,28 +52,22 @@ Route::get('/test/password/{pass}',function ($pass){
 
 /*
 |--------------------------------------------------------------------------
-| login
+| Authentication
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
 |
 */
 Route::get('/admin/login', [LoginController::class,'login']);
 Route::post('/admin/login', [LoginController::class,'checkLogin']);
-Route::get('/admin/dashboard', [adminController::class,'dashboard']);
 Route::get('/admin/register', [LoginController::class,'create']);
 Route::post('/admin/register', [LoginController::class,'register']);
 
 /*
 |--------------------------------------------------------------------------
-| CRUD
+| Admin Panel
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/admin/post',PostController::class);
+Route::get('/admin', [adminController::class,'dashboard']);
+Route::resource('/admin/posts',PostController::class);

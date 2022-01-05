@@ -15,3 +15,5 @@ yarn-error.log
 /.vscode
 /public/afracode/admin/login/node_modules/
 /public/afracode/admin/login/
+/public/coreui/
+/public/node_modules/
