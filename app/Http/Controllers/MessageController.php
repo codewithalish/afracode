@@ -17,7 +17,11 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+           'name'=>['required','string' , 'max:10'],
+           'email'=>['required', 'email'],
+           'body'=>['required', 'string' , 'min:5']
+        ]);
         $inputs=$request->only('name','email','body');
         Message::create($inputs);
         return redirect('contact')->with('success','با موفقیت ارسال شد');
