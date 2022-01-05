@@ -24,12 +24,12 @@ use \App\Http\Controllers\PostController;
 |--------------------------------------------------------------------------
 | Public
 |--------------------------------------------------------------------------
-|
-|
 */
-
-Route::view('/','pages.welcome');
-
+Route::view('/', 'pages.welcome');
+Route::view('/about', 'pages.about');
+Route::view('/portfolio', 'pages.portfolio');
+Route::view('/contact', 'pages.contact');
+Route::view('/blog', 'pages.blog'); //todo
 
 
 /*
@@ -39,13 +39,13 @@ Route::view('/','pages.welcome');
 |
 |
 */
-Route::view('/test','admin.test');
-Route::view('/test/blog','pages.blog');
-Route::view('/test/contact','pages.contact');
-Route::view('/test/about','pages.about');
-Route::view('/test/portfolio2','pages.portfolio2');
-Route::view('/test/portfolio','pages.portfolio');
-Route::get('/test/password/{pass}',function ($pass){
+Route::view('/test', 'admin.test');
+Route::view('/test/blog', 'pages.blog');
+Route::view('/test/contact', 'pages.contact');
+Route::view('/test/about', 'pages.about');
+Route::view('/test/portfolio2', 'pages.portfolio2');
+Route::view('/test/portfolio', 'pages.portfolio');
+Route::get('/test/password/{pass}', function ($pass) {
     return Hash::make($pass);
 });
 
@@ -57,10 +57,10 @@ Route::get('/test/password/{pass}',function ($pass){
 |
 |
 */
-Route::get('/admin/login', [LoginController::class,'login']);
-Route::post('/admin/login', [LoginController::class,'checkLogin']);
-Route::get('/admin/register', [LoginController::class,'create']);
-Route::post('/admin/register', [LoginController::class,'register']);
+Route::get('/admin/login', [LoginController::class, 'login']);
+Route::post('/admin/login', [LoginController::class, 'checkLogin']);
+Route::get('/admin/register', [LoginController::class, 'create']);
+Route::post('/admin/register', [LoginController::class, 'register']);
 
 /*
 |--------------------------------------------------------------------------
@@ -69,5 +69,6 @@ Route::post('/admin/register', [LoginController::class,'register']);
 |
 |
 */
-Route::get('/admin', [adminController::class,'dashboard']);
-Route::resource('/admin/posts',PostController::class);
+Route::get('/admin', [adminController::class, 'dashboard']);
+Route::resource('/admin/posts', PostController::class);
+Route::resource('/admin/portfolio', \App\Http\Controllers\Admin\PortfolioController::class);
