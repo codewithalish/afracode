@@ -15,7 +15,8 @@
                 </header>
                 <div class="row pb-space">
                     <div class="col-md-8 col-lg-8 div-center">
-                        <form class="form form-1">
+                        <form class="form form-1" action="/test/store" method="post">
+                            @csrf
                             <div class="row row-md">
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <div class="form-item">
@@ -44,7 +45,7 @@
                                 <div class="col-12">
                                     <div class="form-item">
                                         <label>Your Message</label>
-                                        <textarea></textarea>
+                                        <textarea name="message"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">

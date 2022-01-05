@@ -39,6 +39,7 @@ Route::view('/blog', 'pages.blog'); //todo
 |
 |
 */
+Route::post('/test/store' , [\App\Http\Controllers\Dev\TestController::class, 'store']);
 Route::view('/test', 'admin.test');
 Route::view('/test/blog', 'pages.blog');
 Route::view('/test/contact', 'pages.contact');
