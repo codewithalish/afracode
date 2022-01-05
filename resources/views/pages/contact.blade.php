@@ -18,8 +18,8 @@
                             <div class="alert alert-success">{{session()->get('success')}}</div>
                         @endif
 
-                        @if(session()->has('error'))
-                            <div class="alert alert-danger">{{session()->get('error')}}</div>
+                        @if($errors->any())
+                            <div style="background-color: red; border: 1px solid black;">ERROR</div>
                         @endif
                         <form class="form form-1" action="/contacts" method="post">
                             @csrf
