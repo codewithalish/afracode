@@ -73,3 +73,4 @@ Route::post('/admin/register', [LoginController::class, 'register']);
 Route::get('/admin', [adminController::class, 'dashboard']);
 Route::resource('/admin/posts', PostController::class);
 Route::resource('/admin/portfolio', \App\Http\Controllers\Admin\PortfolioController::class);
+Route::resource('/admin/contacts', \App\Http\Controllers\Admin\ContactController::class);
