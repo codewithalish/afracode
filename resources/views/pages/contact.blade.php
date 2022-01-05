@@ -2,11 +2,10 @@
 
 @section('content')
 
-
-
-
     <!--Contact-->
     <section class="section section-contact section-contact-1">
+
+
         <div class="pt-space pb-sapce">
             <div class="container pt-space pb-space">
                 <header class="el-heading el-heading-1 mb-space-half center">
@@ -15,7 +14,14 @@
                 </header>
                 <div class="row pb-space">
                     <div class="col-md-8 col-lg-8 div-center">
-                        <form class="form form-1" action="/test/store" method="post">
+                        @if(session()->has('success'))
+                            <div class="alert alert-success">{{session()->get('success')}}</div>
+                        @endif
+
+                        @if(session()->has('error'))
+                            <div class="alert alert-danger">{{session()->get('error')}}</div>
+                        @endif
+                        <form class="form form-1" action="/contacts" method="post">
                             @csrf
                             <div class="row row-md">
                                 <div class="col-12 col-sm-12 col-md-6">
@@ -45,7 +51,7 @@
                                 <div class="col-12">
                                     <div class="form-item">
                                         <label>Your Message</label>
-                                        <textarea name="message"></textarea>
+                                        <textarea name="body"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
