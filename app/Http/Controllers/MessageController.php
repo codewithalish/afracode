@@ -20,7 +20,7 @@ class MessageController extends Controller
         //
         $inputs=$request->only('name','email','body');
         Message::create($inputs);
-        return redirect('contact');
+        return redirect('contact')->with('success','با موفقیت ارسال شد');
     }
 
 }

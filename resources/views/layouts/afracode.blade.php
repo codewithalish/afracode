@@ -24,6 +24,14 @@
     <link rel="stylesheet" href="/afracode/assets/css/plugins.min.css" />
     <link rel="stylesheet" href="/afracode/assets/css/styles.css" />
     <link rel="stylesheet" href="/afracode/assets/css/skins/skin-1.css" />
+
+
+    <style>
+        .alert-success {
+            background-color: lightgreen;
+            border: 1px solid green;
+        }
+    </style>
 </head>
 
 <body>

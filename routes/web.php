@@ -30,6 +30,7 @@ Route::view('/about', 'pages.about');
 Route::view('/portfolio', 'pages.portfolio');
 Route::view('/contact', 'pages.contact');
 Route::view('/blog', 'pages.blog'); //todo
+Route::post('/contacts' , [\App\Http\Controllers\MessageController::class, 'store']);
 
 
 /*
