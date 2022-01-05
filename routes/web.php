@@ -34,7 +34,7 @@ Route::view('/blog', 'pages.blog'); //todo
 
 /*
 |--------------------------------------------------------------------------
-| Dev
+| Dev & Test
 |--------------------------------------------------------------------------
 |
 |
@@ -58,10 +58,10 @@ Route::get('/test/password/{pass}', function ($pass) {
 |
 |
 */
-Route::get('/admin/login', [LoginController::class, 'login']);
-Route::post('/admin/login', [LoginController::class, 'checkLogin']);
-Route::get('/admin/register', [LoginController::class, 'create']);
-Route::post('/admin/register', [LoginController::class, 'register']);
+Route::get('login', [LoginController::class, 'login']);
+Route::post('login', [LoginController::class, 'checkLogin']);
+Route::get('register', [LoginController::class, 'create']);
+Route::post('register', [LoginController::class, 'register']);
 
 /*
 |--------------------------------------------------------------------------
