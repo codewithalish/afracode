@@ -18,8 +18,17 @@
                             <div class="alert alert-success">{{session()->get('success')}}</div>
                         @endif
 
+
+
                         @if($errors->any())
-                            <div style="background-color: red; border: 1px solid black;">ERROR</div>
+                            <div style="background-color: red; border: 1px solid black;">
+
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
                         @endif
                         <form class="form form-1" action="/contacts" method="post">
                             @csrf
@@ -27,9 +36,15 @@
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <div class="form-item">
                                         <label>Name</label>
-                                        <input type="text" class="input-icon" name="name">
+                                        <input type="text" class="input-icon" name="name" value="{{old('name') ?? ''}}">
+                                        @error('name')
+                                        <strong style="color:red;">{{$message}}</strong>
+                                        @enderror
                                         <div class="icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="feather feather-user">
                                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                                 <circle cx="12" cy="7" r="4"></circle>
                                             </svg>
@@ -39,9 +54,15 @@
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <div class="form-item">
                                         <label>Email address</label>
-                                        <input type="email" class="input-icon" name="email">
+                                        <input type="text" class="input-icon" name="email" value="{{old('email') ?? ''}}">
+                                        @error('email')
+                                            <strong style="color:red;">{{$message}}</strong>
+                                        @enderror
                                         <div class="icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="feather feather-at-sign">
                                                 <circle cx="12" cy="12" r="4"></circle>
                                                 <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
                                             </svg>
@@ -51,7 +72,10 @@
                                 <div class="col-12">
                                     <div class="form-item">
                                         <label>Your Message</label>
-                                        <textarea name="body"></textarea>
+                                        <textarea name="body">{{old('body') ?? ''}}</textarea>
+                                        @error('body')
+                                        <strong style="color:red;">{{$message}}</strong>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12">
