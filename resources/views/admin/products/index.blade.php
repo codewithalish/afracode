@@ -2,7 +2,7 @@
 @section('content')
     <div class="body flex-grow-1 px-3">
         <div class="container-lg">
-            <div class="callout callout-info bg-white">لیست پست ها
+            <div class="callout callout-info bg-white">لیست محصولات
             </div>
             <div class="car"></div>
             <div class="card mb-4">
@@ -22,12 +22,12 @@
                             <tr>
                                 <td>{{$item->id}}</td>
                                 <td>{{$item->title}}</td>
-                                <td>{{$item->body}}</td>
+                                <td>{{$item->price}}</td>
                                 <td>
-                                    <a href="/admin/posts/{{$item->id}}">نمایش</a>|
-                                    <a href="/admin/posts/{{$item->id}}/edit">ویرایش</a>|
+                                    <a href="/admin/products/{{$item->id}}">نمایش</a>|
+                                    <a href="/admin/products/{{$item->id}}/edit">ویرایش</a>|
 
-                                    <form action="/admin/posts/{{$item->id}}" method="post">
+                                    <form action="/admin/products/{{$item->id}}" method="post">
                                         @csrf
                                         @method('delete')
                                         <button>حذف</button>

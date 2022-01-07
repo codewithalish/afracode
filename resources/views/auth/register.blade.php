@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     @include('layouts.partials.auth.alert')
-                    <form action="/admin/register" method="post">
+                    <form action="/register" method="post">
                         @csrf
                         <div class="card-group d-block d-md-flex row">
                             <div class="card col-md-7 p-4 mb-0">
@@ -48,7 +48,7 @@
                                     <div>
                                         <h2>Sign up</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        <a href="/admin/login">
+                                        <a href="/login">
                                         <button class="btn btn-lg btn-outline-light mt-3" type="button">login Now!</button>
                                         </a>
                                     </div>

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Models\Portfolio;
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class PortfolioController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,20 @@ class PortfolioController extends Controller
     public function index()
     {
         //
-      $query=Portfolio::get();
-      return view('portfolio.index',['items'=>$query]);
+
+        $titleCard = 'لیست';
+        $th = ['شناسه', 'title', 'price', 'operation'];
+        $query = Product::get();
+        return view('admin.products.index',
+            [
+                'items' => $query,
+                'th' => $th,
+                'titleCard' => $titleCard,
+            ]);
+
+//
+//        $query=Post::get();
+//        return view('admin.posts.index',['items'=>$query]);
     }
 
     /**
@@ -27,7 +39,7 @@ class PortfolioController extends Controller
     public function create()
     {
         //
-        return view('portfolio.create');
+        return view('admin.products.create');
     }
 
     /**
@@ -39,9 +51,9 @@ class PortfolioController extends Controller
     public function store(Request $request)
     {
         //
-        $inputs=$request->only('title','price','body','image_path');
-        Portfolio::create($inputs);
-        return redirect('portfolio');
+        $inputs=$request->only('title','price','description','image_path','details');
+        Product::create($inputs);
+        return redirect('products');
     }
 
     /**
@@ -53,8 +65,8 @@ class PortfolioController extends Controller
     public function show($id)
     {
         //
-        $query=Portfolio::find($id);
-        return view('portfolio.show',['items'=>$query]);
+        $query=Product::find($id);
+        return view('admin.products.show',['item'=>$query]);
     }
 
     /**
@@ -66,8 +78,8 @@ class PortfolioController extends Controller
     public function edit($id)
     {
         //
-        $query=Portfolio::where('id',$id)->first();
-        return view('portfolio.edit',['items'=>$query]);
+        $query=Product::where('id',$id)->first();
+        return view('admin.products.edit',['item'=>$query]);
     }
 
     /**
@@ -80,8 +92,8 @@ class PortfolioController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $query=$request->only(['title','price','body','image_path']);
-        Portfolio::where('id',$id)->update($query);
+        $query=$request->only(['title','price','description','image_path','details']);
+        Product::where('id',$id)->update($query);
         return back();
     }
 
@@ -94,7 +106,7 @@ class PortfolioController extends Controller
     public function destroy($id)
     {
         //
-        Portfolio::query()->where('id',$id)->delete();
+        Product::query()->where('id', $id)->delete();
         return back();
     }
 }

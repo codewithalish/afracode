@@ -15,7 +15,7 @@ class ContactController extends Controller
         //
         $titleCard = 'نمایش پیام کاربر';
         $query = Message::find($id);
-        return view('admin.contact.show', ['item' => $query, 'titleCard' => $titleCard]);
+        return view('admin.contacts.show', ['item' => $query, 'titleCard' => $titleCard]);
     }
     public function index()
     {

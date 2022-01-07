@@ -10,8 +10,10 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 @include('layouts.partials.auth.alert')
-
-                <form action="/admin/login" method="post">
+@if(session()->has('success'))
+    <div class="alert success-alert" style="background-color: lightgreen">{{session()->get('success')}}</div>
+                @endif
+                <form action="/login" method="post">
                     @csrf
                     <div class="card-group d-block d-md-flex row">
                         <div class="card col-md-7 p-4 mb-0">
@@ -45,7 +47,7 @@
                                 <div>
                                     <h2>Sign up</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <a href="/admin/register">
+                                    <a href="/register">
                                     <button class="btn btn-lg btn-outline-light mt-3" type="button">Register Now!</button>
                                     </a>
                                 </div>

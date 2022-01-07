@@ -2,7 +2,7 @@
 @section('content')
     <div class="body flex-grow-1 px-3">
         <div class="container-lg">
-            <div class="callout callout-info bg-white">اطلاعات پست
+            <div class="callout callout-info bg-white">اطلاعات محصول
             </div>
             <div class="car"></div>
             <div class="card mb-4">
@@ -16,12 +16,14 @@
                     <strong>title:</strong>
                     <span>{{$item->title}}</span>
                     <hr>
-                    <strong>body:</strong>
-                    <span>{{$item->body}}</span>
+                    <strong>price:</strong>
+                    <span>{{$item->price}}</span>
+                    <hr>
+                    <strong>description:</strong>
+                    <span>{{$item->description}}</span>
                     <hr>
                     <strong>details:</strong>
                     <span>{{$item->details}}</span>
-
                 </div>
             </div>
         </div>

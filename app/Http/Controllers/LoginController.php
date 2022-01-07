@@ -21,7 +21,7 @@ class LoginController extends Controller
     if($result){
         return redirect('admin');
     } else{
-        return redirect('admin/login')->with('error','نام کاربری یا رمز عبور اشتباه است.');
+        return redirect('/login')->with('error','نام کاربری یا رمز عبور اشتباه است.');
     }
    }
 
@@ -33,7 +33,7 @@ class LoginController extends Controller
        $fields=$request->only('name','email','password');
        $fields['password']=Hash::make($fields['password']);
        User::create($fields);
-       return redirect('/admin/login')->with('success','با موفقیت ثبت شدید.');
+       return redirect('/login')->with('success','با موفقیت ثبت شدید.');
    }
 
 }

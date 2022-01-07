@@ -4,7 +4,12 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\LoginController;
 use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Hash;
-use \App\Http\Controllers\PostController;
+use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\PortfolioController;
+use App\Http\Controllers\ProductControllerl;
+//use App\Http\Controllers\PostController;
 
 
 /*
@@ -17,7 +22,7 @@ use \App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::get('/', [\App\Http\Controllers\SeviceController::class, 'welcome']);
+//Route::get('/', [\App\Http\Controllers\ServiceController::class, 'welcome']);
 
 
 /*
@@ -25,12 +30,18 @@ use \App\Http\Controllers\PostController;
 | Public
 |--------------------------------------------------------------------------
 */
-Route::view('/', 'pages.welcome');
+//Route::view('/', 'pages.welcome');
 Route::view('/about', 'pages.about');
 Route::view('/portfolio', 'pages.portfolio');
 Route::view('/contact', 'pages.contact');
 Route::view('/blog', 'pages.blog'); //todo
+Route::get('/', [\App\Http\Controllers\ServiceController::class,'welcome']);
 Route::post('/contacts' , [\App\Http\Controllers\MessageController::class, 'store']);
+
+Route::resource('/afracode/products', ProductControllerl::class);
+Route::resource('/afracode/posts', \App\Http\Controllers\PostController::class);
+
+
 
 
 /*
@@ -73,5 +84,6 @@ Route::post('register', [LoginController::class, 'register']);
 */
 Route::get('/admin', [adminController::class, 'dashboard']);
 Route::resource('/admin/posts', PostController::class);
-Route::resource('/admin/portfolio', \App\Http\Controllers\Admin\PortfolioController::class);
-Route::resource('/admin/contacts', \App\Http\Controllers\Admin\ContactController::class);
+Route::resource('/admin/products', ProductController::class);
+Route::resource('/admin/portfolio', PortfolioController::class);
+Route::resource('/admin/contacts', ContactController::class);

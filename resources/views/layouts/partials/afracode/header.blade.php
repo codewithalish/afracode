@@ -24,9 +24,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/services">
+                            <a href="/blog">
                                 <span class="icon"></span>
-                                <span class="text">Services</span>
+                                <span class="text">blog</span>
                             </a>
                         </li>
                         <li>
@@ -45,7 +45,7 @@
                     <!--/-->
                 </div>
                 <div class="col-md-3 text-right">
-                    <a href="/admin/login" class="button button-md button-contact-us button-line-secondary">
+                    <a href="/login" class="button button-md button-contact-us button-line-secondary">
                         <span class="text"> log in </span>
                     </a>
                 </div>

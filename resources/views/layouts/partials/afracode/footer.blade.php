@@ -13,31 +13,31 @@
                     <!--Menu-->
                     <ul class="el-menu">
                         <li>
-                            <a href="index.html">
+                            <a href="/">
                                 <span class="icon"></span>
                                 <span class="text">Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="page-about.html">
+                            <a href="/about">
                                 <span class="icon"></span>
                                 <span class="text">About Us</span>
                             </a>
                         </li>
                         <li>
-                            <a href="services.html">
+                            <a href="/blog">
                                 <span class="icon"></span>
-                                <span class="text">Services</span>
+                                <span class="text">blog</span>
                             </a>
                         </li>
                         <li>
-                            <a href="portfolio.html">
+                            <a href="/portfolio">
                                 <span class="icon"></span>
                                 <span class="text">Portfolio</span>
                             </a>
                         </li>
                         <li>
-                            <a href="page-contact.html">
+                            <a href="/contact">
                                 <span class="icon"></span>
                                 <span class="text">Contact Us</span>
                             </a>
