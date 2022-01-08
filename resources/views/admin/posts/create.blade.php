@@ -10,8 +10,18 @@
             <div class="card mb-4">
                 <div class="card-header">{{$cardTitle ?? ''}}</div>
 
+                @if($errors->any())
+                    <div style="background-color: red;border: 1px solid black;">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="/admin/posts" method="post">
                     @csrf
+
                     <div class="card-body">
                         <div class="mb-3">
                             <label class="form-label" for="title">title</label>
@@ -20,7 +30,8 @@
 
                         <div class="mb-3">
                             <label class="form-label" for="details">details</label>
-                            <input class="form-control" id="details" type="text" placeholder="details" name="details">
+                            <input class="form-control" id="details" type="text" placeholder="details"
+                                   name="details">
                         </div>
 
                         <div class="mb-3">

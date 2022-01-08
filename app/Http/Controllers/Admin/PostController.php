@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class PostController extends Controller
 {
@@ -56,9 +57,28 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        $data = $request->all();
+        $rules = [
+            'title' => ['required', 'string', 'max:10', 'min:8'],
+            'price' => ['required', 'number'],
+            'body' => ['required', 'string', 'min:5'],
+            'image_path' => ['required', 'string'],
+            'details' => ['required', 'string', 'min:10'],
+
+        ];
+        $messages = [
+            'required' => ' فیلد :attribute اجباری است',
+            'min' => 'فیلد شما باید حداقل :min تا کاراکتر داشته باشد'
+        ];
+        $validator = Validator::make($data, $rules, $messages);
         $inputs = $request->only('title', 'price', 'body', 'image_path', 'details');
         Post::create($inputs);
-        return redirect('admin/posts');
+
+
+
+        if($validator->fails()){
+            return back()->withErrors($validator);
+        }
     }
 
     /**
@@ -99,7 +119,7 @@ class PostController extends Controller
         //
         $query = $request->only(['title', 'price', 'body', 'image_path', 'details']);
         Post::where('id', $id)->update($query);
-        return back()->with('success','ویرایش با موفقیت انجام شد');
+        return back()->with('success', 'ویرایش با موفقیت انجام شد');
     }
 
     /**
