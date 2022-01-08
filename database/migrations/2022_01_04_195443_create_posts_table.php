@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('image_path')->nullable();
             $table->string('body');
             $table->text('details');
-            $table->bigInteger('price')->nullable();
+            $table->bigInteger('price')->nullable(  );
             $table->timestamps();
         });
     }
