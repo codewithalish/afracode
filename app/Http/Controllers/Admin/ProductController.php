@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -10,7 +11,7 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
     {
@@ -51,9 +52,29 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        $data=$request->all();
+        $rules=[
+            'title'=> ['required' , 'string', 'max:20' , 'min:5'],
+            'description'=> ['required' , 'string' , 'min:10' , 'max:40'],
+            'price'=> ['required'],
+            'image_path'=> ['required' , 'string'],
+            'details'=> ['required' , 'string' , 'min:50']
+        ];
+        $messages=[
+            'required'=> 'فیلد :attribute اجباری است.' ,
+            'min'=>'حداقل کاراکتر مجاز این فیلد :min کاراکتر است.',
+            'max'=>'حداکثر کاراکتر مجاز این فیلد :max کاراکتر است.'
+
+        ];
+
+        $validator=Validator::make($data , $rules , $messages);
+
         $inputs=$request->only('title','price','description','image_path','details');
         Product::create($inputs);
-        return redirect('products');
+
+        if($validator->fails()){
+            return back()->withErrors($validator);
+        }
     }
 
     /**

@@ -10,6 +10,7 @@
 
                 <form action="/admin/products" method="post">
                     @csrf
+                    @method('PUT')
                     <div class="card-body">
                         <div class="mb-3">
                             <label class="form-label" for="title">title</label>
