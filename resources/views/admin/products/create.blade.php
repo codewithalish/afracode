@@ -9,6 +9,16 @@
             <div class="card mb-4">
                 <div class="card-header">{{$cardTitle ?? ''}}</div>
 
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <form action="/admin/products" method="post">
                     @csrf
                     <div class="card-body">
@@ -24,7 +34,8 @@
 
                         <div class="mb-3">
                             <label class="form-label" for="price">description</label>
-                            <input class="form-control" id="description" type="text" placeholder="description" name="description">
+                            <input class="form-control" id="description" type="text" placeholder="description"
+                                   name="description">
                         </div>
 
                         <div class="mb-3">
