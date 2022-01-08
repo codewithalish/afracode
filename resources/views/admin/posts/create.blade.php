@@ -10,7 +10,7 @@
             <div class="card mb-4">
                 <div class="card-header">{{$cardTitle ?? ''}}</div>
 
-                <form action="/admin/portfolio" method="post">
+                <form action="/admin/posts" method="post">
                     @csrf
                     <div class="card-body">
                         <div class="mb-3">

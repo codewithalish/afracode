@@ -27,7 +27,7 @@
                                         </div>
 
                                     <p>{{$item->body}}</p>
-                                    <img src="{{$item->image_path}}" alt="Service">
+                                    <img src="{{$item->image_path ?? '/images/1-1.jpg'}}" alt="default">
                                 </div>
                                 </div>
                             </a>

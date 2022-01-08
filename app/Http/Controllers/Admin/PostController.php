@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -19,7 +20,9 @@ class PostController extends Controller
 
         $titleCard = 'لیست';
         $th = ['شناسه', 'title', 'price', 'operation'];
-        $query = Post::get();
+        $query = Post::query()
+            ->orderBy('id', 'DESC')
+            ->get();
         return view('admin.posts.index',
             [
                 'items' => $query,
@@ -47,62 +50,62 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         //
-        $inputs=$request->only('title','price','body','image_path','details');
+        $inputs = $request->only('title', 'price', 'body', 'image_path', 'details');
         Post::create($inputs);
-        return redirect('posts');
+        return redirect('admin/posts');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         //
-        $query=Post::find($id);
-        return view('admin.posts.show',['item'=>$query]);
+        $query = Post::find($id);
+        return view('admin.posts.show', ['item' => $query]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
-        $query=Post::where('id',$id)->first();
-        return view('admin.posts.edit',['item'=>$query]);
+        $query = Post::where('id', $id)->first();
+        return view('admin.posts.edit', ['item' => $query]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, $id)
     {
         //
-        $query=$request->only(['title','price','body','image_path','details']);
-        Post::where('id',$id)->update($query);
-        return back();
+        $query = $request->only(['title', 'price', 'body', 'image_path', 'details']);
+        Post::where('id', $id)->update($query);
+        return back()->with('success','ویرایش با موفقیت انجام شد');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

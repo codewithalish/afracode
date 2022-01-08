@@ -8,8 +8,9 @@
             <div class="card mb-4">
                 <div class="card-header">{{$cardTitle ?? ''}}</div>
 
-                <form action="/admin/posts" method="post">
+                <form action="/admin/posts/{{$item->id}}" method="post">
                     @csrf
+                    @method('put')
                     <div class="card-body">
                         <div class="mb-3">
                             <label class="form-label" for="title">title</label>
