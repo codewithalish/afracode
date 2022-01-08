@@ -1,5 +1,7 @@
 @extends('layouts.afracode')
 
+
+
 @section('content')
     <!--Hero-->
     <section class="section-hero section-hero-17 mt-80">
@@ -39,7 +41,7 @@
                 <div class="row row-lg">
                     <!--Item-->
 
-                    {{--                    @foreach(\App\Models\Service::limit(3)->get() as $item)--}}
++                    {{--                    @foreach(\App\Models\Service::limit(3)->get() as $item)--}}
                     @foreach($items as $item)
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <a href="/afracode/products/{{$item->id}}">
@@ -55,7 +57,7 @@
                                         </div>
                                     </div>
                                     <p>{{$item->description}}</p>
-                                    <img src="{{$item->image_path ?? '/images/default.jpg'}}" alt="Service">
+                                    <?php defaultImage($item->image_path) ?>
                                 </div>
                             </a>
                         </div>
