@@ -21,7 +21,7 @@ class PortfolioSeeder extends Seeder
             'title'=>'Orwell - Organic Food Store and Healthy Shop',
             'price'=>100000,
             'body'=>'by Afracode in Retail',
-            'image_path'=>'/afracode/assets/images/portfolio/1-1.jpg'
+            'image_path'=>'/afracode/assets/images/portfolio/default.jpg'
         ]);
 
         Portfolio::create([

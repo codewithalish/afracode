@@ -55,7 +55,7 @@
                                         </div>
                                     </div>
                                     <p>{{$item->description}}</p>
-                                    <img src="{{$item->image_path ?? '/images/1-1.jpg'}}" alt="Service">
+                                    <img src="{{$item->image_path ?? '/images/default.jpg'}}" alt="Service">
                                 </div>
                             </a>
                         </div>
