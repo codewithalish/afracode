@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
 use App\Models\Message;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -16,29 +18,9 @@ class LoginController extends Controller
        return view('auth.login');
    }
 
-    public function checkLogin(Request $request)
+    public function checkLogin(LoginRequest $request)
     {
-        $data = $request->all();
 
-        $rules = [
-            'email' => ['required', 'email'],
-            'password' => ['required', 'string', 'min:5']
-        ];
-
-        $messages = [
-            'required' => ' فیلد :attribute اجباری است',
-            'min' => 'فیلد شما باید حداقل :min تا کاراکتر داشته باشد',
-            'email' => 'ایمیل با فرمت معتبر وارد کنید.'
-        ];
-        // روش اول
-        // $request->validate($rules);
-
-        //روش دوم
-        $validator = Validator::make($data, $rules, $messages);
-
-        if ($validator->fails()) {
-            return back()->withErrors($validator);
-        }
 
         $login_field = $request->only(['email', 'password']);
         $result = auth::attempt($login_field);
@@ -55,30 +37,9 @@ class LoginController extends Controller
        return view('auth.register');
    }
 
-   public function register(Request $request){
+   public function register(RegisterRequest $request){
 
-       $data = $request->all();
 
-       $rules = [
-           'name'=>['required','string' ],
-           'email'=>['required', 'email'],
-           'password'=>['required', 'string' , 'min:5']
-       ];
-
-       $messages = [
-           'required' => ' فیلد :attribute اجباری است',
-           'min' => 'فیلد شما باید حداقل :min تا کاراکتر داشته باشد',
-           'email'=>'ایمیل با فرمت معتبر وارد کنید.'
-       ];
-       // روش اول
-       // $request->validate($rules);
-
-       //روش دوم
-       $validator = Validator::make($data, $rules, $messages);
-
-       if($validator->fails()){
-           return back()->withErrors($validator);
-       }
        $inputs=$request->only('name','email','password');
        $inputs['password']=Hash::make($inputs['password']);
        User::create($inputs);

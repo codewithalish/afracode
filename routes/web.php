@@ -70,10 +70,15 @@ Route::get('/test/password/{pass}', function ($pass) {
 |
 |
 */
-Route::get('login', [LoginController::class, 'login']);
+Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login', [LoginController::class, 'checkLogin']);
 Route::get('register', [LoginController::class, 'create']);
 Route::post('register', [LoginController::class, 'register']);
+Route::get('logout' , function (){
+    session::flush();
+    auth::logout();
+    return redirect('login');
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -82,8 +87,8 @@ Route::post('register', [LoginController::class, 'register']);
 |
 |
 */
-Route::get('/admin', [adminController::class, 'dashboard']);
-Route::resource('/admin/posts', PostController::class);
-Route::resource('/admin/products', ProductController::class);
-Route::resource('/admin/portfolio', PortfolioController::class);
-Route::resource('/admin/contacts', ContactController::class);
+Route::get('/admin', [adminController::class, 'dashboard'])->middleware('auth');
+Route::resource('/admin/posts', PostController::class)->middleware('auth');
+Route::resource('/admin/products', ProductController::class)->middleware('auth');
+Route::resource('/admin/portfolio', PortfolioController::class)->middleware('auth');
+Route::resource('/admin/contacts', ContactController::class)->middleware('auth');
