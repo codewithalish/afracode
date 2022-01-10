@@ -16,7 +16,8 @@
                     <div class="el-card el-card-1 el-portfolio elportfolio-1">
                         <div class="image">
                             <a href="https://themeforest.net/item/orwell-organic-food-store-and-healthy-shop/29113626">
-                                <img src="{{$item->image_path ?? '/images/default.jpg' }}" alt="Portfolio: Orwell - Organic Food Store and Healthy Shop">
+{{--                                <img src="{{$item->image_path ?? '/images/default.jpg' }}" alt="Portfolio: Orwell - Organic Food Store and Healthy Shop">--}}
+                                <?php defaultImage($item->image_path) ?>
                             </a>
                         </div>
                         <div class="details">

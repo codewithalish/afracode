@@ -27,7 +27,8 @@
                                         </div>
 
                                     <p>{{$item->body}}</p>
-                                    <img src="{{$item->image_path ?? '/images/default.jpg'}}" alt="default">
+                                        <?php defaultImage($item->image_path) ?>
+{{--                                    <img src="{{$item->image_path ?? '/images/default.jpg'}}" alt="default">--}}
                                 </div>
                                 </div>
                             </a>

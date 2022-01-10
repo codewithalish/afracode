@@ -8,6 +8,20 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     @include('layouts.partials.auth.alert')
+                    @if(session()->has('success'))
+                        <div class="alert alert-success">{{session()->get('success')}}</div>
+                    @endif
+
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{$error}}</li>
+                                @endforeach
+                            </ul>
+
+                        </div>
+                    @endif
                     <form action="/register" method="post">
                         @csrf
                         <div class="card-group d-block d-md-flex row">
@@ -25,13 +39,19 @@
                       <svg class="icon">
                         <use xlink:href="/afracode/admin/login/node_modules/@coreui/icons/sprites/free.svg#cil-user"></use>
                       </svg></span>
-                                        <input class="form-control" type="text" placeholder="Username" name="email">
+                                        <input class="form-control" type="text" placeholder="email" name="email">
+                                        @error('email')
+                                        <span style="color: red">{{$message}}</span>
+                                        @enderror
                                     </div>
                                     <div class="input-group mb-4"><span class="input-group-text">
                       <svg class="icon">
                         <use xlink:href="/afracode/admin/login/node_modules/@coreui/icons/sprites/free.svg#cil-lock-locked"></use>
                       </svg></span>
                                         <input class="form-control" type="password" placeholder="Password" name="password">
+                                        @error('password')
+                                        <span style="color: red">{{$message}}</span>
+                                        @enderror
                                     </div>
                                     <div class="row">
                                         <div class="col-6">
