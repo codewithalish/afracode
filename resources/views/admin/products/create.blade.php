@@ -9,15 +9,8 @@
             <div class="card mb-4">
                 <div class="card-header">{{$cardTitle ?? ''}}</div>
 
-                @if($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach($errors->all() as $error)
-                                <li>{{$error}}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+                @include('layouts.partials.auth.alert')
+
 
                 <form action="/admin/products" method="post">
                     @csrf

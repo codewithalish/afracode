@@ -7,21 +7,9 @@
             <div class="car"></div>
             <div class="card mb-4">
                 <div class="card-header">{{$cardTitle ?? ''}}</div>
-                @if(session()->has('success'))
-                    <div class="alert alert-success">{{session()->get('success')}}</div>
-                @endif
+                @include('layouts.partials.auth.alert')
 
-                @if($errors->any())
-                    <div style="background-color: red; border: 1px solid black;">
-                        <ul>
-                            @foreach($errors->all() as $error)
-                                <li>{{$error}}</li>
-                            @endforeach
-                        </ul>
-
-                    </div>
-                @endif
-                <form action="/admin/products" method="post">
+                <form action="/admin/products/{{$item->id}}" method="post">
                     @csrf
                     @method('PUT')
                     <div class="card-body">
