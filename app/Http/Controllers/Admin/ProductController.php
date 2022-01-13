@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -49,32 +50,13 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         //
-        $data=$request->all();
-        $rules=[
-            'title'=> ['required' , 'string', 'max:20' , 'min:5'],
-            'description'=> ['required' , 'string' , 'min:10' , 'max:40'],
-            'price'=> ['required'],
-            'image_path'=> ['required' , 'string'],
-            'details'=> ['required' , 'string' , 'min:50']
-        ];
-        $messages=[
-            'required'=> 'فیلد :attribute اجباری است.' ,
-            'min'=>'حداقل کاراکتر مجاز این فیلد :min کاراکتر است.',
-            'max'=>'حداکثر کاراکتر مجاز این فیلد :max کاراکتر است.'
-
-        ];
-
-        $validator=Validator::make($data , $rules , $messages);
 
         $inputs=$request->only('title','price','description','image_path','details');
         Product::create($inputs);
-
-        if($validator->fails()){
-            return back()->withErrors($validator);
-        }
+        return redirect('admin/products')->with('success','با موفقیت ارسال شد');
     }
 
     /**

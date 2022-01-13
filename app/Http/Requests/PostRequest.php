@@ -31,10 +31,10 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=>['required','string','min:5','max:40' ],
+            'title'=>['required','string','min:5', ],
             'image_path'=>['string'],
-            'body'=>['required', 'string','min:40','max:100'],
-        'details'=>['string','min:50','max:500']
+            'body'=>['required', 'string','min:40',],
+        'details'=>['string','min:50',]
         ];
     }
 

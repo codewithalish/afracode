@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -54,31 +55,13 @@ class PostController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         //
-        $data = $request->all();
-        $rules = [
-            'title' => ['required', 'string', 'max:10', 'min:8'],
-            'price' => ['required', 'number'],
-            'body' => ['required', 'string', 'min:5'],
-            'image_path' => ['required', 'string'],
-            'details' => ['required', 'string', 'min:10'],
 
-        ];
-        $messages = [
-            'required' => ' فیلد :attribute اجباری است',
-            'min' => 'فیلد شما باید حداقل :min تا کاراکتر داشته باشد'
-        ];
-        $validator = Validator::make($data, $rules, $messages);
         $inputs = $request->only('title', 'price', 'body', 'image_path', 'details');
         Post::create($inputs);
-
-
-
-        if($validator->fails()){
-            return back()->withErrors($validator);
-        }
+        return redirect('admin/posts')->with('success','با موفقیت ارسال شد');
     }
 
     /**
