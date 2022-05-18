@@ -25,13 +25,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/blog">
+                            <a href="/afracode/products">
                                 <span class="icon"></span>
                                 <span class="text">blog</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/portfolio">
+                            <a href="/afracode/posts">
                                 <span class="icon"></span>
                                 <span class="text">Portfolio</span>
                             </a>
