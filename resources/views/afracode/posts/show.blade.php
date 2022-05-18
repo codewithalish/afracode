@@ -14,8 +14,8 @@
             <div class="card mb-4">
                 <div class="card-header">{{$titleCard ?? ''}}</div>
                 <div class="card-body">
-                    <?php defaultImage($item->image_path) ?>
-{{--                    <img src="{{$item->image_path ?? '' }}" alt="{{$item->title ?? ''}}">--}}
+<!--                    --><?php //defaultImage($item->image_path) ?>
+                    <img src="{{$item->image_path ?? '/images/default.jpg' }}" alt="{{$item->title ?? ''}}">
                     <hr>
                     <strong>id:</strong>
                     <span>{{$item->id ?? ''}}</span>

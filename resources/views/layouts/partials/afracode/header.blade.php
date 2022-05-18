@@ -10,7 +10,8 @@
                 </div>
                 <div class="col-md-6">
                     <!--Menu-->
-                    <ul class="el-menu">
+{{--                    <ul class="el-menu">--}}
+                    <ul style="display:flex; justify-content: space-around; color:orange; margin-top: 20px">
                         <li>
                             <a href="/">
                                 <span class="icon"></span>
@@ -24,7 +25,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/blog">
+                            <a href="/afracode/posts">
                                 <span class="icon"></span>
                                 <span class="text">blog</span>
                             </a>

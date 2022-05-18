@@ -11,8 +11,8 @@
         <div class="pb-space">
             <div class="container">
                 <header class="el-heading el-heading-1 pb-space center">
-                    <span class="label">PRODUCTS</span>
-                    <h2>products in AfraCode</h2>
+                    <span class="label">POSTS</span>
+                    <h2>POSTS in AfraCode</h2>
                 </header>
                 <div class="row row-lg">
                     <!--Item-->
@@ -27,8 +27,8 @@
                                         </div>
 
                                     <p>{{$item->body}}</p>
-                                        <?php defaultImage($item->image_path) ?>
-{{--                                    <img src="{{$item->image_path ?? '/images/default.jpg'}}" alt="default">--}}
+<!--                                        --><?php //defaultImage($item->image_path) ?>
+                                    <img src="{{$item->image_path ?? '/images/default.jpg'}}" alt="default">
                                 </div>
                                 </div>
                             </a>

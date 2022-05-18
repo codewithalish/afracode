@@ -9,7 +9,7 @@
                 <!--Menu-->
                 <ul class="el-menu">
                     <li>
-                        <a href="/welcome">
+                        <a href="/">
                             <span class="icon"></span>
                             <span class="text">Home</span>
                         </a>
@@ -20,12 +20,12 @@
                             <span class="text">About Us</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/blog">
-                            <span class="icon"></span>
-                            <span class="text">blog</span>
-                        </a>
-                    </li>
+{{--                    <li>--}}
+{{--                        <a href="/blog">--}}
+{{--                            <span class="icon"></span>--}}
+{{--                            <span class="text">blog</span>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
                     <li>
                         <a href="/portfolio">
                             <span class="icon"></span>
@@ -34,6 +34,18 @@
                     </li>
                     <li>
                         <a href="/contact">
+                            <span class="icon"></span>
+                            <span class="text">Contact Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/afracode/products">
+                            <span class="icon"></span>
+                            <span class="text">Contact Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/afracode/posts">
                             <span class="icon"></span>
                             <span class="text">Contact Us</span>
                         </a>

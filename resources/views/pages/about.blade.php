@@ -92,7 +92,7 @@
                         <p>With an intuitive markup, powerful and lightning fast build tools, Quick has everything you need to turn your ideas into incredible products.</p>
                     </div>
                     <div class="col-12 col-md-4 text-right">
-                        <a href="#" class="button button-md button-line-light mt-15">
+                        <a href="/contact" class="button button-md button-line-light mt-15">
                             <span class="text">Contact Now</span>
                         </a>
                     </div>

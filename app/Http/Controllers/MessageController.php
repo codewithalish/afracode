@@ -21,14 +21,14 @@ class MessageController extends Controller
         $data = $request->all();
 
         $rules = [
-            'name'=>['required','string' , 'max:10', 'min:8'],
+            'name'=>['required','string' , 'min:3'],
             'email'=>['required', 'email'],
             'body'=>['required', 'string' , 'min:5']
         ];
 
         $messages = [
             'required' => ' فیلد :attribute اجباری است',
-            'min' => 'فیلد شما باید حداقل :min تا کاراکتر داشته باشد'
+            'min' => 'فیلد :attribute باید حداقل :min تا کاراکتر داشته باشد'
         ];
         // روش اول
        // $request->validate($rules);

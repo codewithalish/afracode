@@ -15,7 +15,7 @@
                         <a href="#" class="button button-md button-line-light">
                             <span class="text text-light">Let's Get Started</span>
                         </a>
-                        <a href="#" class="button button-md button-warning">
+                        <a href="/portfolio" class="button button-md button-warning">
                             <span class="text">Watch  Portfolio</span>
                         </a>
                     </div>
@@ -57,7 +57,9 @@
                                         </div>
                                     </div>
                                     <p>{{$item->description}}</p>
-                                    <?php defaultImage($item->image_path) ?>
+<!--                                    --><?php //defaultImage($item->image_path) ?>
+                                    <img src="{{$item->image_path ?? '/images/default.jpg'}}" alt="default">
+
                                 </div>
                             </a>
                         </div>
@@ -86,7 +88,7 @@
                                 <h2>We'll Plan, Design and Develope & Maintain Project</h2>
                                 <p>Start your Business with AfraCode. Build a beautiful, modern website with flexible
                                     Bootstrap components built from scratch.</p>
-                                <a href="#" class="button button-md button-primary">
+                                <a href="/about" class="button button-md button-primary">
                                     <span class="text">Read More</span>
                                 </a>
                             </header>
@@ -112,7 +114,7 @@
                                 <h2>We Provide Awesome Service to our Customer</h2>
                                 <p>Start your Business with AfraCode. Build a beautiful, modern website with flexible
                                     Bootstrap components built from scratch.</p>
-                                <a href="#" class="button button-md button-primary">
+                                <a href="/services" class="button button-md button-primary">
                                     <span class="text">More Details</span>
                                 </a>
                             </header>
@@ -136,7 +138,7 @@
                                 you need to turn your ideas into incredible products.</p>
                         </div>
                         <div class="col-12 col-md-4 text-right">
-                            <a href="#" class="button button-md button-line-light mt-15">
+                            <a href="/contact" class="button button-md button-line-light mt-15">
                                 <span class="text">Contact Now</span>
                             </a>
                         </div>

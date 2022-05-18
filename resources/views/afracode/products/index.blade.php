@@ -33,8 +33,8 @@
                                         </div>
                                     </div>
                                     <p>{{$item->description}}</p>
-{{--                                    <img src="{{$item->image_path}}" alt="Service">--}}
-                                    <?php defaultImage($item->image_path) ?>
+                                    <img src="{{$item->image_path ?? '/images/default.jpg'}}" alt="Service">
+<!--                                    --><?php //defaultImage($item->image_path) ?>
                                 </div>
                             </a>
                         </div>

@@ -23,7 +23,7 @@
                       <svg class="icon">
                         <use xlink:href="/afracode/admin/login/node_modules/@coreui/icons/sprites/free.svg#cil-user"></use>
                       </svg></span>
-                                    <input class="form-control" type="text" placeholder="Username" name="email">
+                                    <input class="form-control" type="text" placeholder="email" name="email">
                                 </div>
 {{--                                @error('password')--}}
 {{--                                <span style="color: red">{{$message}}</span>--}}
