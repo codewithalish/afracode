@@ -25,7 +25,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/afracode/posts">
+                            <a href="/afracode/products">
                                 <span class="icon"></span>
                                 <span class="text">blog</span>
                             </a>
